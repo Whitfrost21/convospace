@@ -29,4 +29,5 @@ This project is a group chat application developed in Java. It allows multiple c
    - `javac Client.java`
    - `java Client`
 
-###
+### Screenshots
+![Screenshot 2024-09-17 221819](https://github.com/user-attachments/assets/e6b892f4-4e4b-41c9-804c-48467f1450a5)
