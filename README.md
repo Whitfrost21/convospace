@@ -19,7 +19,7 @@ This project is a group chat application developed in Java. It allows multiple c
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Whitfrost21/convospace.git
+   git clone https://github.com/Whitfrost21/convospace
    cd convospace
    ```
    - now compile the Server code and run it
