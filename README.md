@@ -23,10 +23,10 @@ This project is a group chat application developed in Java. It allows multiple c
    cd convospace
    ```
    - now compile the Server code and run it
-   -`javac Server.java`
+   - `javac Server.java`
    - `java Server`
    - Then run multiple clients and enter Username
-   -`javac Client.java`
-   -`java Client`
+   - `javac Client.java`
+   - `java Client`
 
 ###
