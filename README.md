@@ -31,3 +31,8 @@ This project is a group chat application developed in Java. It allows multiple c
 
 ### Screenshots
 ![Screenshot 2024-09-17 221819](https://github.com/user-attachments/assets/e6b892f4-4e4b-41c9-804c-48467f1450a5)
+
+![Screenshot 2024-09-17 223753](https://github.com/user-attachments/assets/2c2d6159-fb33-4eb1-933b-92ac7f8eb9c6)
+
+
+
