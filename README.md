@@ -22,10 +22,10 @@ This project is a group chat application developed in Java. It allows multiple c
    git clone https://github.com/Whitfrost21/convospace
    cd convospace
    ```
-   - now compile the Server code and run it
+   - compile the Server code and run it
    - `javac Server.java`
    - `java Server`
-   - Then run multiple clients and enter Username
+   - run multiple clients and enter Username
    - `javac Client.java`
    - `java Client`
 
