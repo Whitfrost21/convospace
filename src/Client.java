@@ -1,10 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.net.Socket;
-import java.util.Base64;
-import javax.crypto.*;
-import javax.crypto.spec.IvParameterSpec;
+import java.net.Socket;
 import javax.swing.*;
 
 public class Client extends JFrame {
@@ -18,7 +15,7 @@ public class Client extends JFrame {
   private Font font = new Font("Roboto", Font.BOLD, 25);
   private JButton jbut = new JButton("send");
 
-  // private static final String BASE64_KEY = "AQIDBAUGBwgJCgsMDQ4PEA==";
+  
 
   public Client(Socket socket, String Username) {
     try {
@@ -183,26 +180,8 @@ public class Client extends JFrame {
     }
   }
 
-  //// public static SecretKey loadkey() throws Exception {
-  //    try (FileInputStream fis = new FileInputStream("pass.txt");
-  // ObjectInputStream ois = new ObjectInputStream(fis)) {
-  // return (SecretKey) ois.readObject();
-  // } catch (Exception e) {
-  //      throw new Exception("Failed to load the secret key", e);
-  //  }
-  //  }
+  
 
-  public String decrypt(String enc, SecretKey key) throws Exception {
-    String[] parts = enc.split(":");
-    byte[] iv = Base64.getDecoder().decode(parts[0]);
-    byte[] encryptedBytes = Base64.getDecoder().decode(parts[1]);
-
-    Cipher cip = Cipher.getInstance("AES/CBC/PKCS5Padding");
-    IvParameterSpec ivSpec = new IvParameterSpec(iv);
-    cip.init(Cipher.DECRYPT_MODE, key, ivSpec);
-    byte[] decryptedBytes = cip.doFinal(encryptedBytes);
-    return new String(decryptedBytes);
-  }
 
   public static void main(String[] args) throws Exception {
     Socket socket = new Socket("127.0.0.1", 3233);
@@ -210,8 +189,7 @@ public class Client extends JFrame {
     String Username =
         JOptionPane.showInputDialog(null, "enter username", "ok", JOptionPane.QUESTION_MESSAGE);
     Client c = new Client(socket, Username);
-    // byte[] decodedKey = Base64.getDecoder().decode(BASE64_KEY);
-    // SecretKey key = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES");
+    
     c.CreateFrame();
     c.loaddata();
     c.listen();
