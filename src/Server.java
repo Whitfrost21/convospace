@@ -53,11 +53,7 @@ class CLHandler implements Runnable {
   private BufferedWriter writer;
   private String Username;
 
-  // private static final byte[] KEY_BYTES =
-  //  new byte[] {
-  //  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
-  // 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10
-  // };
+  
 
   public CLHandler(Socket socket) {
     try {
@@ -77,7 +73,7 @@ class CLHandler implements Runnable {
   public void run() {
     String messagefromClient;
     try {
-      // SecretKey key = new SecretKeySpec(KEY_BYTES, "AES");
+      
       while (socket.isConnected()) {
         messagefromClient = reader.readLine();
         Broadcast(messagefromClient);
@@ -105,36 +101,11 @@ class CLHandler implements Runnable {
     }
   }
 
-  // public SecretKey generatekey() throws Exception {
-  // KeyGenerator keygen = KeyGenerator.getInstance("AES");
-  // keygen.init(128);
-  // return keygen.generateKey();
-  // }
-
-  // public void savekey(SecretKey key) {
-  // try (FileOutputStream fos = new FileOutputStream("pass.txt");
-  //  ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-  // oos.writeObject(key);
-  // oos.flush();
-  // } catch (Exception e) {
-  // e.printStackTrace();
-  // }
-  // }
-
-  // public String encrypt(String mesg, SecretKey key) throws Exception {
-  // Cipher cip = Cipher.getInstance("AES/CBC/PKCS5Padding");
-  // byte[] iv = new byte[16]; // Generate a random IV
-  // IvParameterSpec ivSpec = new IvParameterSpec(iv);
-  // cip.init(Cipher.ENCRYPT_MODE, key, ivSpec);
-  // byte[] encryptedBytes = cip.doFinal(mesg.getBytes());
-  // return Base64.getEncoder().encodeToString(iv)
-  // + ":"
-  // + Base64.getEncoder().encodeToString(encryptedBytes);
-  // }
+  
 
   public void writetohistory(String Mesg) {
     try (BufferedWriter bf = new BufferedWriter(new FileWriter("histo.txt", true))) {
-      // String enc = encrypt(Mesg, key);
+      
       bf.write(Mesg);
       bf.newLine();
 
