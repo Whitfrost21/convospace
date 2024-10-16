@@ -13,7 +13,7 @@ This project is a group chat application developed in Java. It allows multiple c
 
 
 ### Prerequisites
-- Java Development Kit (JDK) 8 or higher
+- Java Development Kit (JDK) 1.8 or higher
 - An IDE or text editor (e.g., IntelliJ IDEA, Eclipse, NetBeans)
 
 ### Installation
